@@ -20,6 +20,25 @@
       }
     });
 
+    // Mobile menu: the hamburger button toggles the nav links, which are
+    // hidden on small screens (see the max-width:640px rules in style.css).
+    // Placed before the reduced-motion early return so the menu works
+    // for everyone, including reduced-motion users.
+    var burger = document.querySelector('.burger');
+    var navLinks = document.querySelector('.nav-links');
+    if (burger && navLinks) {
+      burger.addEventListener('click', function () {
+        var open = navLinks.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navLinks.addEventListener('click', function (e) {
+        if (e.target.closest('a')) {
+          navLinks.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduce) return;
 
