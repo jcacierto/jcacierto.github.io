@@ -93,3 +93,12 @@
     .role { padding-left:28px; padding-bottom:44px; }
     .role-date { white-space:normal; }
   }
+
+  /* ---------- Projects page (projects.html only) ---------- */
+  .placeholder { margin-top:56px; border:1px solid var(--line); border-radius:12px; padding:36px 32px; background:rgba(255,255,255,.02); }
+  .placeholder-title { font-size:clamp(20px, 2.6vw, 26px); font-weight:700; letter-spacing:.01em; }
+  .placeholder-text { margin-top:12px; color:var(--grey); line-height:1.65; font-size:16.5px; }
+
+  @media (max-width:640px) {
+    .placeholder { padding:28px 24px; }
+  }
