@@ -111,3 +111,8 @@
   @media (max-width:640px) {
     .placeholder { padding:28px 24px; }
   }
+
+  /* Placeholder card spacing (Projects page): second card sits closer
+     to the first, and a download button inside a card gets breathing room. */
+  .placeholder + .placeholder { margin-top:24px; }
+  .placeholder .btn { display:inline-block; margin-top:24px; }
