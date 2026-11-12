@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cedric Acierto, E.I.T. — SCADA &amp; Systems Engineering</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* SCADA landing page, in the same stars theme as the main landing page:
+     black, white, grey, Helvetica, twinkling stars — no new accent colour. */
+  .scada-eyebrow { margin-top:0; font-size:12px; letter-spacing:.28em; text-transform:uppercase; color:#a8a8a8; }
+  .hero h1 { margin:10px 0 0; }
+  .hero .cred { margin-top:10px; }
+  .hero .buttons { margin-top:20px; }
+  .li-in { background:#fff; color:#000; font-weight:800; padding:2px 6px; border-radius:3px; font-size:12px; margin-right:8px; }
+  .skills-row { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:20px; }
+  .skill-pill { border:1px solid #262626; border-radius:999px; padding:7px 14px; font-size:12px; color:#e8e8e8; }
+</style>
+</head>
+<body>
+
+  <section class="stage" id="stage">
+    <!-- Same twinkling-star background as the main landing page -->
+    <div class="layer layer-specks3" data-depth="5"></div>
+    <div class="layer layer-specks" data-depth="11"></div>
+    <div class="layer layer-specks2" data-depth="14"></div>
+    <!-- Foreground content moves slightly against the layers -->
+    <div class="content" id="content" data-depth="-8">
+      <nav>
+        <a class="logo" href="index.html">JCA</a>
+        <div class="nav-links">
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a class="resume-btn" href="Resume_CedricAcierto.pdf" download>Resume</a>
+        </div>
+        <button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+      </nav>
+
+      <div class="hero">
+        <p class="scada-eyebrow">SCADA &middot; Automation Engineering</p>
+        <h1>CEDRIC ACIERTO, E.I.T.</h1>
+        <div class="cred">B.Sc. Software Engineering, University of Calgary &bull; Working Toward INCOSE ASEP Certification</div>
+        <div class="buttons">
+          <a class="btn btn-fill" href="projects.html">View Projects</a>
+          <a class="btn btn-line" href="Resume_CedricAcierto.pdf" download>Download Resume</a>
+          <a class="btn btn-line" href="https://www.linkedin.com/in/jcacierto" target="_blank" rel="noopener"><span class="li-in">in</span>LinkedIn</a>
+        </div>
+        <div class="skills-row">
+          <span class="skill-pill">C/C++</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">SCADA</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">Arduino</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
