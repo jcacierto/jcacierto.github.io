@@ -71,3 +71,22 @@
     }
     requestAnimationFrame(frame);
   })();
+
+// Home-link fix (2026-11-11): if the visitor came from scada.html, keep them
+// in the SCADA funnel. JCA logo and "Back to home" point back to scada.html
+// instead of index.html. The About link only exists on index.html, so hide
+// it in that case. Otherwise everything defaults to index.html as before.
+(function () {
+  try {
+    if (document.referrer && document.referrer.indexOf('scada.html') !== -1) {
+      var homeLinks = document.querySelectorAll('a.logo, a.back-link');
+      for (var i = 0; i < homeLinks.length; i++) {
+        homeLinks[i].setAttribute('href', 'scada.html');
+      }
+      var aboutLinks = document.querySelectorAll('a[href="index.html#about"]');
+      for (var j = 0; j < aboutLinks.length; j++) {
+        aboutLinks[j].style.display = 'none';
+      }
+    }
+  } catch (e) {}
+})();
